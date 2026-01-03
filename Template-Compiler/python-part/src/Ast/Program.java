@@ -11,9 +11,12 @@ public class Program extends Element {
         super("Program", lineNumber);
         elements = new ArrayList<>();
     }
+<<<<<<< HEAD
     public List<Element> getElements() {
         return elements;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     public void addElement(Element element) {
         elements.add(element);

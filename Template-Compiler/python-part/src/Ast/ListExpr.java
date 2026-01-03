@@ -9,9 +9,12 @@ public class ListExpr extends Expression{
         super("ListExpr", lineNumber);
         this.elements = elements;
     }
+<<<<<<< HEAD
     public List<Expression> getElements() {
         return elements;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

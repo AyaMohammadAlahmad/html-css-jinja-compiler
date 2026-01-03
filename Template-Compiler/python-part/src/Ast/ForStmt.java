@@ -11,6 +11,7 @@ public class ForStmt extends Element {
         this.iterable = iterable;
         this.body = body;
     }
+<<<<<<< HEAD
     public String getVariable() {
         return variable;
     }
@@ -22,6 +23,8 @@ public class ForStmt extends Element {
     public Block getBody() {
         return body;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

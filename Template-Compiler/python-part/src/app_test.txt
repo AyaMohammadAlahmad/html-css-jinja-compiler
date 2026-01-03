@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(name)
 
 # بيانات جاهزة للعرض
+=======
+from flask import Flask,render_template, request, redirect
+app = Flask(name)
+
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 products = [
     {
         "id": 1,
@@ -20,6 +26,7 @@ products = [
     }
 ]
 
+<<<<<<< HEAD
 
 @app.route("/")
 def index():
@@ -36,14 +43,35 @@ def show_products():
 @app.route("/products/add", methods=["GET", "POST"])
 def add_product():
     # (ب) إضافة منتج
+=======
+@app.route("/")
+def index():
+
+    return redirect(url_for("show_products"))
+
+@app.route("/products")
+def show_products():
+    return render_template("products.html", products=products)
+
+@app.route("/products/add")
+def add_product():
+
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
     if request.method == "POST":
         name = request.form["name"]
         price = float(request.form["price"])
         image = request.form["image"]
         details = request.form["details"]
 
+<<<<<<< HEAD
         # رقم جديد للمنتج
         new_id = products[-1]["id"] + 1 if products else 1
+=======
+        if products:
+            new_id = products[len(products) - 1]["id"] + 1
+        else:
+            new_id = 1
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
         products.append({
             "id": new_id,
@@ -51,6 +79,7 @@ def add_product():
             "price": price,
             "image": image,
             "details": details
+<<<<<<< HEAD
         })
 
         return redirect(url_for("show_products"))
@@ -62,6 +91,91 @@ def add_product():
 @app.route("/products/<int:product_id>")
 def product_detail(product_id):
     # (ج) تفاصيل منتج
+=======
+        })from flask import Flask, render_template, request, redirect, url_for
+
+          app = Flask(name)
+
+          # بيانات جاهزة للعرض
+          products = [
+              {
+                  "id": 1,
+                  "name": "Laptop",
+                  "price": 1200,
+                  "image": "https://via.placeholder.com/150x100?text=Laptop",
+                  "details": "Simple laptop for work and study."
+              },
+              {
+                  "id": 2,
+                  "name": "Headphones",
+                  "price": 150,
+                  "image": "https://via.placeholder.com/150x100?text=Headphones",
+                  "details": "Over-ear headphones with clear sound."
+              }
+          ]
+
+
+          @app.route("/")
+          def index():
+              return redirect(url_for("show_products"))
+
+
+          @app.route("/products")
+          def show_products():
+              return render_template("products.html", products=products)
+
+
+          @app.route("/products/add", methods=["GET", "POST"])
+          def add_product():
+              if request.method == "POST":
+                  name = request.form["name"]
+                  price = float(request.form["price"])
+                  image = request.form["image"]
+                  details = request.form["details"]
+
+
+                  new_id = products[-1]["id"] + 1 if products else 1
+
+                  products.append({
+                      "id": new_id,
+                      "name": name,
+                      "price": price,
+                      "image": image,
+                      "details": details
+                  })
+
+                  return redirect(url_for("show_products"))
+
+
+              return render_template("add_product.html")
+
+
+          @app.route("/products/<int:product_id>")
+          def product_detail(product_id):
+
+              product = None
+              for p in products:
+                  if p["id"] == product_id:
+                      product = p
+                      break
+
+              if product is None:
+                  return "Product not found", 404
+
+              return render_template("product_detail.html", product=product)
+
+
+          if name == "main":
+              app.run(debug=True)
+
+        return redirect(url_for("show_products"))
+
+    return render_template("add_product.html")
+
+@app.route("/products/<int:product_id>")
+def product_detail(product_id):
+
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
     product = None
     for p in products:
         if p["id"] == product_id:
@@ -73,6 +187,9 @@ def product_detail(product_id):
 
     return render_template("product_detail.html", product=product)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 if name == "main":
     app.run(debug=True)

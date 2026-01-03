@@ -8,6 +8,7 @@ public class UnaryExpr extends Expression{
         this.operator = operator;
         this.operand = operand;
     }
+<<<<<<< HEAD
     public String getOperator() {
         return operator;
     }
@@ -15,6 +16,8 @@ public class UnaryExpr extends Expression{
     public Expression getOperand() {
         return operand;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
     @Override
     public void print(int indent) {
         printIndent(indent);

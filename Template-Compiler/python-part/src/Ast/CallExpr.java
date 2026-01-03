@@ -12,6 +12,7 @@ public class CallExpr extends Expression {
         this.function = function;
         this.arguments = arguments;
     }
+<<<<<<< HEAD
     public Expression getFunction() {
         return function;
     }
@@ -19,6 +20,8 @@ public class CallExpr extends Expression {
     public List<Expression> getArguments() {
         return arguments;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

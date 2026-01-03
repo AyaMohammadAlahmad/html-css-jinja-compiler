@@ -12,6 +12,7 @@ public class AssignmentStmt extends Element {
         this.variable = variable;
         this.value = value;
     }
+<<<<<<< HEAD
     public String getVariable() {
         return variable;
     }
@@ -19,6 +20,8 @@ public class AssignmentStmt extends Element {
     public Expression getValue() {
         return value;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

@@ -9,9 +9,12 @@ public class ReturnStmt extends Element {
         super("ReturnStmt", lineNumber);
         this.values = values;
     }
+<<<<<<< HEAD
     public List<Expression> getValues() {
         return values;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

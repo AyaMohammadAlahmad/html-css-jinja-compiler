@@ -1,5 +1,6 @@
 package symbolTable;
 
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,3 +57,7 @@ public class Scope {
         }
     }
 }
+=======
+public class Scope {
+}
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6

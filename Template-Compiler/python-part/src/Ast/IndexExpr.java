@@ -9,6 +9,7 @@ public class IndexExpr extends Expression{
         this.target = target;
         this.index = index;
     }
+<<<<<<< HEAD
     public Expression getTarget() {
         return target;
     }
@@ -16,6 +17,8 @@ public class IndexExpr extends Expression{
     public Expression getIndex() {
         return index;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

@@ -6,7 +6,10 @@ import Ast.*;
 import visitor.AstBuilder;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
+<<<<<<< HEAD
 import visitor.PythonsymbolTablevisitor;
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
 public class PythonRunner {
 
@@ -25,6 +28,7 @@ public class PythonRunner {
 
         System.out.println("==== PYTHON AST ====");
         ast.print(0);
+<<<<<<< HEAD
 
         // 8) بناء الـ Symbol Table
         PythonsymbolTablevisitor stVisitor = new PythonsymbolTablevisitor();
@@ -33,5 +37,7 @@ public class PythonRunner {
         // 9) طباعة الـ Symbol Table
         System.out.println("\n====== SYMBOL TABLE ======");
         stVisitor.getSymbolTable().print();
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
     }
 }

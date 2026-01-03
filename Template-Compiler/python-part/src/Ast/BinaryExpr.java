@@ -11,6 +11,7 @@ public class BinaryExpr extends Expression{
         this.operator = operator;
         this.right = right;
     }
+<<<<<<< HEAD
     public Expression getLeft() {
         return left;
     }
@@ -22,6 +23,8 @@ public class BinaryExpr extends Expression{
     public String getOperator() {
         return operator;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

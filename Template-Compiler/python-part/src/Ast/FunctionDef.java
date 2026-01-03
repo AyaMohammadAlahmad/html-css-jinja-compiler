@@ -17,6 +17,7 @@ public class FunctionDef extends Element {
         this.parameters = parameters;
         this.body = body;
     }
+<<<<<<< HEAD
     public String getName() {
         return name;
     }
@@ -28,6 +29,8 @@ public class FunctionDef extends Element {
     public Block getBody() {
         return body;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {

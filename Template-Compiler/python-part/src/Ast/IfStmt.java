@@ -11,6 +11,7 @@ public class IfStmt extends Element{
         this.thenBlock=thenBlock;
         this.elseBlock=elseBlock;
     }
+<<<<<<< HEAD
     public Expression getCondition() {
         return condition;
     }
@@ -22,6 +23,8 @@ public class IfStmt extends Element{
     public Block getElseBlock() {
         return elseBlock;
     }
+=======
+>>>>>>> 96ead987ca5bb9f072a71a29471d55cb656574e6
 
     @Override
     public void print(int indent) {
